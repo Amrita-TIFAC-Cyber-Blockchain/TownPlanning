@@ -1,0 +1,42 @@
+/*
+    Author       : Aishwarya.S.R
+    Project      : Amrita-Blockchain-UI
+    Date Updated : 25.06.2020
+*/
+
+.reg-box
+{
+  position: relative;
+  background-color: ivory;
+  width:400px;
+  margin-left: 35%;
+  margin-top: 7%;  
+}
+
+.reg-form
+{
+  display: inline-grid;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-left: 10%;
+  margin-right: 10%
+
+}
+
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.footer{
+    background-color: #212529;
+    color: #FFFF;
+    padding: 5px 0;
+    padding-left:1245px;
+    margin-top: 150px;
+    font-size: 15px;
+}
+

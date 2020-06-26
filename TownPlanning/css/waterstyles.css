@@ -1,0 +1,43 @@
+#reg-box
+{
+	width: 700px; 
+	margin-left:30%;
+	margin-top: 10%;
+	text-align: center;
+}
+
+#reg-form{
+	width:500px; 
+	margin-left: 2%; 
+	margin-top:5%;"
+}
+
+#display-content
+{
+	margin-top: 5%;
+}
+
+.buttons-check
+{
+	display: flex;
+}
+
+#button-left
+{
+	margin-left: 20%;
+}
+#button-right
+{
+	margin-left: 10%;
+}
+.footer-content
+{
+	text-align:right;
+	height: 50px;
+	bottom: 0px;
+	left: 0px; 
+	background-color: #008081;
+	color: white;
+	margin-top: 17.5%;
+	margin-bottom: 0%;
+}

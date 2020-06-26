@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NEW WATER CONNECTION</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+	
+		var cat;
+		var subcat;
+
+		function checkowner(that) {
+			
+		    if (that.value == "Others") {
+		  
+		        document.getElementById("ifothers").style.display = "block";
+		    } else {
+		        document.getElementById("ifothers").style.display = "none";
+		    }
+
+		    if(that.value != "Owner"){
+		  
+		        document.getElementById("ifnotOwn").style.display = "block";
+		    } else {
+		        document.getElementById("ifnotOwn").style.display = "none";
+		    }
+
+		}
+
+		function buildutil(that){
+			cat=that.value;
+			if (cat == "1") {
+		        document.getElementById("a").innerHTML = "(a1) Upto G+1 - Upto 100 sqm";
+		        document.getElementById("b").innerHTML = "(a2) Upto G+2 - Above 100 Upto 200";
+		    }
+
+		    else if (cat == "2") {
+		    	document.getElementById("a").innerHTML = "All other buildings/flats - Upto 200 sqm";
+		    }
+
+		    else if (cat == "3") {
+		    	document.getElementById("a").innerHTML = "Category A - 100 sqm";
+		    	document.getElementById("b").innerHTML = "Category B - 50 sqm";
+		    	document.getElementById("c").innerHTML = "Category C - 25 sqm";
+		    }
+
+		    else if (cat == "4") {
+		    	document.getElementById("a").innerHTML = "Residential - Upto 200 sqm";
+		    	document.getElementById("b").innerHTML = "Commercial";
+		    }
+
+		    else{
+		    	document.getElementById("a").innerHTML = "Reconnectionofserviceconnections disconnected fornon-payment   of   tax   and   charges/Shifting /Renewal of existing connection ";
+		    }
+
+		    if(cat == "5")
+			{
+				document.getElementById("Number of dwelling units").style.display="none";
+			}
+			else
+			{
+				document.getElementById("Number of dwelling units").style.display="block";
+			}
+
+		}
+
+		
+	</script>
+	<link rel="stylesheet" type="text/css" href="waterstyles.css">
+</head>
+<body>
+	<header>
+		<div class="container-fluid" >
+      <!-- Nav Bar -->
+
+		      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		        <a class="navbar-brand nav-bar-text" href="#">Water Connection</a>
+		        <button
+		          class="navbar-toggler"
+		          type="button"
+		          data-toggle="collapse"
+		          data-target="#navbarTogglerDemo01"
+
+		          aria-controls="navbarTogglerDemo01"
+		          aria-expanded="false"
+		          aria-label="Toggle navigation"
+		        >
+		          <span class="navbar-toggler-icon"></span>
+		        </button>
+
+		        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		          <ul class="navbar-nav ml-auto">
+		            <li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="water-supply.html"
+		                >Apply</a
+		              >
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="display.html">Display</a>
+		            </li>
+		        </div>
+		      </navbar>
+    	</div>
+	</header>
+
+	<section id="application-form">
+		<div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <h3>Write your comments</h3><br><br>
+                  <form>
+                  	<div class="form-group">
+					    <label for="Comment"> Comment</label>
+					    <textarea class="form-control" id="Comment"> </textarea>
+  				  	</div>
+  				  	<button type="button" class="btn btn-primary">Submit</button>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+	</section>
+
+	<footer>
+		<div class="footer-content">
+			Copyrights Amrita Blockchain UI team
+		</div>
+	</footer>
+	
+	 <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+</body>
+</html>

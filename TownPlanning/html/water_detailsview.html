@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NEW WATER CONNECTION</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	
+	<link rel="stylesheet" type="text/css" href="waterstyles.css">
+	
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+	
+<div class="navbar">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Coimbatore Corporation</a>
+    </div>
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Electricity
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="html/elect_newconn.html">New Electricity Connection</a>
+      <a href="html/elect_detailsview.html">Check the request</a>
+      <a href="html/elect_review.html">Approval</a>
+    </div>
+  </div>
+     <div class="dropdown">
+    <button class="dropbtn">Building Plan 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="html/building_newplan.html">Request New Plan Approval</a>
+      <a href="html/building_detailsview.html">Plan Status</a>
+    </div>
+  </div> 
+     <div class="dropdown">
+    <button class="dropbtn">Birth & Death Certificates 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="html/birth_death_new.htm#register_birth">New Birth Certificate</a>
+      <a href="html/birth_death_new.html#register_death">New Death Certificate</a>
+      <a href="html/birth_death_detailsview.html#register_birth">Birth Certificate Status</a>
+	  <a href="html/birth_death_detailsview.html#register_death">Death Certificate Status</a>
+    </div>
+  </div> 
+     <div class="dropdown">
+    <button class="dropbtn">Water Management 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="html/water_newconn.html">New Water Connection</a>
+      <a href="html/water_detailsview.html">Status</a>
+    </div>
+  </div> 
+</div>
+	<header>
+		<div class="container-fluid" >
+      <!-- Nav Bar -->
+
+		      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		        <a class="navbar-brand nav-bar-text" href="#">Water Connection</a>
+		        <button
+		          class="navbar-toggler"
+		          type="button"
+		          data-toggle="collapse"
+		          data-target="#navbarTogglerDemo01"
+
+		          aria-controls="navbarTogglerDemo01"
+		          aria-expanded="false"
+		          aria-label="Toggle navigation"
+		        >
+		          <span class="navbar-toggler-icon"></span>
+		        </button>
+
+		        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		          <ul class="navbar-nav ml-auto">
+		            <li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="water-supply.html"
+		                >Apply</a
+		              >
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="display.html">Display</a>
+		            </li>
+		        </div>
+		      </navbar>
+    	</div>
+	</header>
+
+	<section id="application-form">
+		<div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box" >
+                <div class="reg-form" id="reg-form">
+                  <h3>Water Connection Application -Display</h3><br><br>
+                  <form>
+                  	<div class="form-group">
+					    <label for="Appln-no"> Application Number</label>
+					    <input type="text" class="form-control" id="Appln-no" placeholder="Application number"> 
+  				  	</div>
+  				  	<button type="button" class="btn btn-primary">Submit</button>
+                  </form>
+
+                  <div class="content" id="display-content">
+                  	<label for="Appl-name"> Name of the Applicant</label>
+                  	<p id="Appl-name">..</p>
+
+                  	<br>
+
+                  	<label for="Appl-addr"> Address of the Applicant</label>
+                  	<p id="Appl-addr">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Appl-phone"> Phone number of the Applicant</label>
+                  	<p id="Appl-phone">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Appl-mobile"> Mobile number of the Applicant</label>
+                  	<p id="Appl-mobile">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Appl-email"> Email ID of the Applicant</label>
+                  	<p id="Appl-email">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Owner-name"> Name of the Owner</label>
+                  	<p id="Owner-name">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Owner-addr"> Address of the Owner</label>
+                  	<p id="Owner-addr">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Owner-phone"> Phone number of the Owner</label>
+                  	<p id="Owner-phone">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Owner-mobile"> Mobile number of the Owner</label>
+                  	<p id="Owner-mobile">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Owner-email"> Email ID of the Owner</label>
+                  	<p id="Owner-email">..</p>
+
+                  	<br>
+                  	
+                  	<label for="new-building"> Connection for new building</label>
+                  	<p id="new-building">..</p>
+
+                  	<br>
+                  	
+                  	<label for="modified-building"> Connection for modified building</label>
+                  	<p id="modified-building">..</p>
+
+                  	<br>
+                  	
+                  	<label for="rain-harvest"> Rain Water Harvesting</label>
+                  	<p id="rain-harvest">..</p>
+
+                  	<br>
+                  	
+                  	<label for="building-utility">Utility of Building</label>
+                  	<p id="building-utility">..</p>
+
+                  	<br>
+                  	
+                  	<label for="area-per-dwelling-unit">Area per dwelling unit</label>
+                  	<p id="area-per-dwelling-unit">..</p>
+
+                  	<br>
+                  	
+                  	<label for="built-up-area">Built-up Area (sq.m) </label>
+                  	<p id="built-up-area">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Number-dwelling-units">Number of dwelling units</label>
+                  	<p id="Number-dwelling-units">..</p>
+
+                  	<br>
+                  	
+                  	<label for="Amount-Paid">Amount paid</label>
+                  	<p id="Amount-Paid">..</p>
+
+                  	<br>
+                  	
+                  </div>
+                  <div class="buttons-check">
+                  	<div id="button-left"><button type="button" class="btn btn-success">Accept</button></div>
+                  	<div id="button-right"><a href="comment.html"><button type="button" class="btn btn-warning">Additional Information</button></a></div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+	</section>
+
+	<footer>
+		<div class="footer-content" style="text-align:right;height: 50px;bottom: 0px;left: 0px; background-color: #008081;color: white;margin-top: 5%;">
+			Copyrights Amrita Blockchain UI team
+		</div>
+	</footer>
+	
+	 <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+</body>
+</html>

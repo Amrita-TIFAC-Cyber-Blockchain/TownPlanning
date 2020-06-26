@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Plan Approval</title>
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .field {
+      display: inline-block;
+      clear: left;
+      width: 250px;
+      text-align: left;
+      font-weight: bold;
+    }
+    .value {
+      display: inline-block;
+
+      margin: 2px;
+    }
+    .hide {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+  </style>
+  <script>
+    function onButtonClick1() {
+      document.getElementById("Building-Plan").className = "show";
+      document.getElementById("View-Button").className = "hide";
+    }
+    function onButtonClick2() {
+      document.getElementById("textInput").className = "show";
+      document.getElementById("reject").className = "hide";
+      document.getElementById("approve").className = "hide";
+    }
+  </script>
+  <body>
+    <header
+      style="
+        background-color: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      "
+    >
+      <h1>Plan Details</h1>
+      <a href="input.html">Enter Details</a>
+    </header>
+    <div class="" id="" style="margin: 100px;">
+      <h2>Applicant Details</h2>
+      <br />
+      <p class="field">Name</p>
+      <p class="value">Lorem Ipsum</p>
+      <br />
+      <p class="field">Phone Number</p>
+      <p class="value">+91 91234 56789</p>
+      <br />
+      <p class="field">Email ID</p>
+      <p class="value">lorem@ipsum.org</p>
+      <br />
+      <p class="field">Address Line 1</p>
+      <p class="value">No.12, Lorem Ipsum Street</p>
+      <br />
+      <p class="field">Address Line 2</p>
+      <p class="value">Coimbatore</p>
+      <br />
+      <p class="field">Designation</p>
+      <p class="value">Manager</p>
+      <br />
+    </div>
+    <hr />
+    <div class="" id="" style="margin: 100px;">
+      <h2>Building Details</h2>
+      <br />
+      <p class="field">Building Type</p>
+      <p class="value">Residential</p>
+      <br />
+      <p class="field">Plot Number</p>
+      <p class="value">23</p>
+      <br />
+
+      <p class="field">Street</p>
+      <p class="value">Amrita Street</p>
+      <br />
+      <p class="field">Ward Number</p>
+      <p class="value">12</p>
+      <br />
+      <p class="field">District</p>
+      <p class="value">Coimbatore</p>
+      <br />
+      <p class="field">Area in SquareFeet</p>
+      <p class="value">12000</p>
+      <br />
+    </div>
+    <hr />
+    <div class="" id="" style="margin: 100px;">
+      <h2>Proposed Plan</h2>
+      <br />
+
+      <button type="" class="btn btn-primary" id="View-Button" onclick="onButtonClick1()"> 
+        View Proposed Plan
+      </button>
+      <div id="Building-Plan" class="hide">
+        <img src="Building-Plan.jpg" alt="building plan" >
+      </div>
+    </div>
+    <hr />
+    <div class="" id="" style="margin: 100px; text-align: center;">
+      <button type="" class="btn btn-primary" id="approve">
+        Approve
+      </button>
+      <button type="" class="btn btn-primary" onclick="onButtonClick2()" id="reject">
+        Reject
+      </button>
+      <div id="textInput" class="hide" >
+        <textarea type="text" placeholder="State Reason(s) For Rejection Here" cols="75"></textarea>
+        <br>
+        <button type="" class="btn btn-primary" onclick="">
+          Reject
+        </button>
+      </div>
+    </div>
+    <footer style="text-align:center; background-color: black; color: white; padding: 2px;">
+      ©Amrita Blockchain Team -2020
+    </footer>
+	
+	 <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+  </body>
+</html>

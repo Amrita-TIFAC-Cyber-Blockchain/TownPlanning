@@ -1,0 +1,410 @@
+    <!-- 
+    Author       : Aishwarya.S.R
+    Project      : Amrita-Blockchain-UI
+    Date Updated : 25.06.2020
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birth and Death Certficate Registration</title>
+    <link rel="icon" type="image/jpg" href="../images/birth_cert.jpg">
+      
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+      
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/birth_death.css" />
+  </head>
+    
+    
+  <body>
+      <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand nav-bar-text" href="#">Birth and Death Certificate Registration</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_birth">Birth Certificate Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_death">Death Certificate Registration</a>
+            </li>
+            </ul>
+        </div>
+      </navbar>
+    </div>
+    
+    <section id="register_birth">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/birth_cert.jpg" width="200px" height="200px">
+                  <h3 text align="center">Birth Certificate Registration</h3><br>
+                  <form>
+                      
+                      <div class="form-group">
+                          <label for="child_name">Child Name</label>
+                          <input type="text" class="form-control" id="child_name" placeholder="Enter the Child name">     
+                      </div>
+
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" placeholder="Enter the date of birth">     
+                    </div>
+
+
+                     <div class="form-group">
+                        <label for="birth_gender">Gender</label><br>
+                          <input type="radio" id="male" name="birth_gender" value="male">
+                          <label for="male">Male</label>
+                          <input type="radio" id="female" name="birth_gender" value="female">
+                          <label for="female">Female</label>
+                          <input type="radio" id="other" name="birth_gender" value="other">
+                          <label for="other">Other</label>
+                    </div>
+
+                      <div class="form-group">
+                          <label for="birth_father_name">Father Name</label>
+                          <input type="text" class="form-control" id="birth_father_name" placeholder="Enter the Father name">     
+                      </div>
+
+                      <div class="form-group">
+                          <label for="birth_mother_name">Mother Name</label>
+                          <input type="text" class="form-control" id="birth_mother_name" placeholder="Enter the Mother name">     
+                      </div>
+
+                     <div class="form-group">
+                        <label for="place_of_birth">Place of Birth</label><br>
+                          <input type="radio" id="hospital" name="place_of_birth" value="hospital">
+                          <label for="hospital">Hospital</label>
+                          <input type="radio" id="home" name="place_of_birth" value="home">
+                          <label for="home">Home</label>
+                          <input type="radio" id="other" name="place_of_birth" value="other">
+                          <label for="other">Other</label>
+                     </div>    
+
+
+                    <div class="form-group">
+                        <label for="birth_state">Enter the state</label><br>
+                        <select id="birth_state" name="birth_state">
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div> 
+
+                       <div class="form-group">
+                          <label for="birth_file">Select the files<br>Required:<br>1.Proof for Date of Birth<br>2.Identity proof of one Parent<br>3.Identity proof of the Applicant<br>4.Proof of Address where the Birth of the Child took place<br>5.Signed Authority Letter</label><br>
+                          <input type="file" id="birth_file" name="birth_file" multiple onchange="return fileValidation()" /><br>
+                      </div>                     
+
+                      <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="reset" class="btn btn-primary" id="birth_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!--Function to validate file type and file size.
+        Reference:
+        1.https://www.geeksforgeeks.org/file-type-validation-while-uploading-it-using-javascript/#:~:text=Using%20JavaScript%2C%20you%20can%20easily,complete%20file%20type%20validation%20code.  
+        2.https://www.geeksforgeeks.org/validation-of-file-size-while-uploading-using-javascript-jquery/?ref=rp
+    -->
+      
+    <script> 
+            function fileValidation() 
+            { 
+                var fileInput =  document.getElementById('birth_file'); 
+
+                var filePath = fileInput.value; 
+
+                // Allowing file type 
+                var allowedExtensions =  /(\.doc|\.docx|\.odt|\.pdf|\.tex|\.txt|\.rtf|\.wps|\.wks|\.wpd)$/i; 
+
+                if (!allowedExtensions.exec(filePath)) 
+                { 
+                    alert('Invalid file type'); 
+                    fileInput.value = ''; 
+                }  
+
+                const fi = document.getElementById('birth_file'); 
+                // Check if any file is selected. 
+                if (fi.files.length > 0) 
+                { 
+                    for (const i = 0; i <= fi.files.length - 1; i++) 
+                    { 
+                        const fsize = fi.files.item(i).size; 
+                        const file = Math.round((fsize / 1024)); 
+                        // The size of the file. 
+                        if (file >= 5120) 
+                        { 
+                            alert( "File too Big, please select a file less than 5mb"); 
+                            fileInput.value = ''; 
+                             return false;
+                        } 
+                    } 
+                }
+            } 
+    </script> 
+           
+          
+      <section id="register_death">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/death_cert.jpg" width="200px" height="200px" align="centre">
+                  <h3 text align="center">Death Certificate Registration</h3><br>
+                  <form>
+                      <div class="form-group">
+                          <label for="death_person_name">Name</label>
+                          <input type="text" class="form-control" id="death_person_name" placeholder="Enter the name of the person who died">     
+                      </div>
+
+                    <div class="form-group">
+                        <label for="dod">Date of Death</label>
+                        <input type="date" class="form-control" id="dod" placeholder="Enter the date of death">     
+                    </div>
+
+                      <div class="form-group">
+                          <label for="death_person_age">Age</label>
+                          <input type="text" class="form-control" id="death_person_age" placeholder="Enter the age of the person who died">     
+                      </div>
+
+                     <div class="form-group">
+                        <label for="death_gender">Gender</label><br>
+                          <input type="radio" id="male" name="death_gender" value="male">
+                          <label for="male">Male</label>
+                          <input type="radio" id="female" name="death_gender" value="female">
+                          <label for="female">Female</label>
+                          <input type="radio" id="other" name="death_gender" value="other">
+                          <label for="other">Other</label>
+                    </div>
+
+                      <div class="form-group">
+                          <label for="death_father_name">Father Name</label>
+                          <input type="text" class="form-control" id="death_father_name" placeholder="Enter the Father name">     
+                      </div>
+
+                      <div class="form-group">
+                          <label for="death_mother_name">Mother Name</label>
+                          <input type="text" class="form-control" id="death_mother_name" placeholder="Enter the Mother name">     
+                      </div>
+
+                     <div class="form-group">
+                        <label for="place_of_death">Place of Death</label><br>
+                          <input type="radio" id="hospital" name="place_of_death" value="hospital">
+                          <label for="hospital">Hospital</label>
+                          <input type="radio" id="home" name="place_of_death" value="home">
+                          <label for="home">Home</label>
+                          <input type="radio" id="other" name="place_of_death" value="other">
+                          <label for="other">Other</label>
+                     </div>    
+
+
+                    <div class="form-group">
+                        <label for="death_state">Enter the state</label>
+                        <br>
+                        <select id="death_state" name="death_state">
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Puducherry">Puducherry</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Odisha">Odisha</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Telangana">Telangana</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                                <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div> 
+
+                       <div class="form-group">
+                          <label for="death_file">Select the files<br>Required:<br>1.Certificate of Death issued by Institution/Physician<br>2.Cremation Certificate<br>3.Proof of Birth of the Deceased<br>4.Identity proof of the Deceased<br>5.Identity proof of the Applicant<br>6.Signed Authority Letter</label><br>
+                          <input type="file" id="death_file" name="death_file" multiple><br>                     
+                      </div>  
+
+                      <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="reset" class="btn btn-primary" id="death_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+      <div class="footer">
+          <div class="container">
+              <p>&copy;Amrita Blockchain UI Team</p>
+          </div>
+      </div>
+	  
+	   <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+      
+  </body>
+</html>

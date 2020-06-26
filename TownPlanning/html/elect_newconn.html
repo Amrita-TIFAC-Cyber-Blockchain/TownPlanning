@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Connection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="cities.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Coimbatore Corporation</a>
+    </div>
+  <a href="electricity.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Electricity
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="electricity_form.html">New Electricity Connection</a>
+      <a href="electricity_retrieval.html">Check the request</a>
+        <a href="sendstatus.html">approval</a>
+    </div>
+  </div>
+     <div class="dropdown">
+    <button class="dropbtn">Building Plan 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+     <div class="dropdown">
+    <button class="dropbtn">Birth & Death Certificates  
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+     <div class="dropdown">
+    <button class="dropbtn">Water Management 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+</div>
+    
+    
+    <div id="main" class="container">
+        <h2 align="center">New Electricity Connection</h2>
+        <div class="panel panel-default">
+  <div class="panel-heading">Application form</div>
+  <div class="panel-body">
+             <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                 
+                 <br>
+                  <label for="gender">Gender:</label><br>
+
+                 <select name="gender" id="gender">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="3">Others</option>
+                 </select>
+                 <br><br>
+                 
+                  <label for="purpose">Purpose:</label><br>
+
+                 <select name="purpose" id="purpose">
+                    <option value="non-industrial">non-industrial</option>
+                    <option value="industrial">industrial</option>
+                    <option value="Agricultural">Agricultural</option>
+                    <option value="Educational">Educational</option>
+                 </select> 
+                 <br><br>
+                  <label for="ctype">Consumer type:</label><br>
+
+                 <select name="ctype" id="ctype">
+                    <option value="1">1-LT Supply</option>
+                    <option value="2">2-HT Supply</option>
+                    <option value="3">3-EHV</option>
+                 </select>
+                 
+                 <br><br>
+                  <label for="stype">Supply type:</label><br>
+
+                 <select name="stype" id="stype">
+                    <option value="1">Single - Single phase</option>
+                    <option value="2">Three - Three Phase</option>
+                 </select>
+                 
+                 <br><br>
+                  <label for="service">Service Requested:</label><br>
+
+                 <select name="service" id="service">
+                    <option value="1">Permanent</option>
+                    <option value="2">Temporary</option>
+                 </select>
+                 
+                 
+                 <br><br>
+                  <label for="occu">Occupation:</label><br>
+
+                 <select name="occu" id="occu">
+                    <option value="1">Service</option>
+                    <option value="2">Profession/Business</option>
+                    <option value="3">Others</option>
+                 </select>
+                 
+                  <br><br>
+                 
+                  <label for="acl">Applicants Classification:</label><br>
+
+                 <select name="acl" id="acl">
+                    <option value="1">Open</option>
+                    <option value="2">OBC</option>
+                    <option value="3">SC</option>
+                    <option value="4">ST</option>
+                 </select>
+                 
+                 <br><br>
+                 <label for="address">Address for the new Connection:</label><br>
+                 <textarea rows="4" cols="50" name="address" form="usrform" placeholder="Enter local address here">
+                     </textarea>
+                 
+                 <br><br>
+                 
+                  <label for="sc">Select State and City:</label><br>
+                 
+                 
+                 <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                 <select id ="state" class="form-control" required name="sc"></select>
+                 <script language="javascript">print_state("sts");</script>
+                 
+                 <br><br>
+                 
+                 <label for="aadhaar">Aadhaar Number:</label><br>
+                <input type="text" id="aadhaar" name="aadhaar"><br><br>
+                <label for="Mobile">Mobile:</label><br>
+                <input type="text" id="mobile" name="Mobile"><br>
+                 
+                 <br><br>
+                 <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email">
+                 
+                 <br><br>
+                 
+                  <label for="premises">Type of premises:</label><br>
+
+                 <select name="premises" id="premises">
+                    <option value="1">Owned</option>
+                    <option value="2">Rent</option>
+                    <option value="3">Lease</option>
+                    <option value="4">Others</option>
+                 </select>
+                 <br><br>
+                 
+                 <input type="checkbox" name="terms" id="terms">  I Agree Terms & Coditions
+                 <br><br>
+                 <input type="submit" value="submit">
+                 
+            </form> 
+            
+            
+            
+            
+            
+            </div>
+        </div>
+        
+    
+    
+    </div>
+
+	 <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+
+    
+</body>
+</html>
