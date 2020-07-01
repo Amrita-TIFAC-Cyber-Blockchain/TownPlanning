@@ -1,0 +1,271 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Electricity Connection</title>
+    <link rel="icon" type="image/jpg" href="../images/city_logo.jpg">
+      
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+      
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/birth_death.css" />
+      
+    <!--JS-->
+    <script src="../js/cities.js"></script>
+      
+  </head>
+    
+    
+  <body>
+      <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand nav-bar-text" href="#">New Electricity Connection</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <!--<li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_birth">Birth Certificate Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_death">Death Certificate Registration</a>
+            </li>-->
+            </ul>
+        </div>
+      </navbar>
+    </div>
+    
+    <section id="register_birth">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/new_electricity_connection.jpg" width="300px" height="200px"><br>
+                  <h3 text align="center">New Electricity Connection</h3><br>
+                  <form>
+                      
+                      <div class="form-group">
+                          <label for="first_name">First Name</label>
+                          <input type="text" class="form-control" id="first_name" placeholder="Enter the first name">     
+                      </div>
+
+                      <div class="form-group">
+                          <label for="last_name">Last Name</label>
+                          <input type="text" class="form-control" id="last_name" placeholder="Enter the last name">     
+                      </div>
+
+                     <div class="form-group">
+                        <label for="birth_gender">Gender</label><br>
+                          <input type="radio" id="male" name="birth_gender" value="male">
+                          <label for="male">Male</label><br>
+                          <input type="radio" id="female" name="birth_gender" value="female">
+                          <label for="female">Female</label><br>
+                          <input type="radio" id="other" name="birth_gender" value="other">
+                          <label for="other">Other</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="purpose">Purpose</label><br>
+                        <select class="form-control" id="purpose" name="purpose">
+                                <option value="Industrial">Industrial</option>
+                                <option value="Non-Industrial">Non-Industrial</option>
+                                <option value="Agricultural">Agricultural</option>
+                                <option value="Educational">Educational</option>
+                        </select>
+                    </div> 
+                      
+                    <div class="form-group">
+                        <label for="Consumer type">Consumer type</label><br>
+                        <select class="form-control" id="Consumer type" name="Consumer type">
+                                <option value="1">1-LT Supply</option>
+                                <option value="2<">2-HT Supply</option>
+                                <option value="3">3-EHV</option>
+                        </select>
+                    </div> 
+                      
+                    <div class="form-group">
+                        <label for="supply type">Supply type</label><br>
+                        <select class="form-control" id="supply type" name="supply type">
+                                <option value="1">Single - Single Phase</option>
+                                <option value="2">Three - Three Phase</option>
+                        </select>
+                    </div> 
+                      
+                    <div class="form-group">
+                        <label for="Service requested">Service requested</label><br>
+                        <select class="form-control" id="Service requested" name="Service requested">
+                                <option value="1">Permanent</option>
+                                <option value="2">Temporary</option>
+                        </select>
+                    </div> 
+                   
+                  <div class="form-group">
+                    <label for="occu">Occupation</label><br>
+                         <select class="form-control" name="occu" id="occu">
+                            <option value="1">Service</option>
+                            <option value="2">Profession/Business</option>
+                            <option value="3">Others</option>
+                         </select>
+                  </div>
+                      
+                  <div class="form-group">
+                      <label for="acl">Applicants Classification</label><br>
+                         <select class="form-control" name="acl" id="acl">
+                            <option value="1">Open</option>
+                            <option value="2">OBC</option>
+                            <option value="3">SC</option>
+                            <option value="4">ST</option>
+                         </select>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="address">Address for the new Connection</label><br>
+                      <textarea rows="4" cols="50" name="address" form="usrform" placeholder="Enter local address here"></textarea>
+                  </div>
+                 
+                  <div class="form-group">
+                        <label for="sc">Select State and City</label><br>
+                            <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                             <select id ="state" class="form-control" required name="sc"></select>
+                             <script language="javascript">print_state("sts");</script>
+                  </div>
+                      
+                  <div class="form-group">
+                     <label for="aadhaar">Aadhaar Number</label><br>
+                     <input type="text" class="form-control" id="aadhaar" placeholder="Enter the aadhar no">
+                  </div>
+                  
+                 <div class="form-group">
+                     <label for="Mobile">Mobile</label><br>
+                     <input type="text" class="form-control" id="mobile" placeholder="Enter the mobile no">
+                 </div>
+                 
+                 <div class="form-group">
+                     <label for="email">Email</label><br>
+                     <input type="text" class="form-control" id="email" placeholder="Enter the email">
+                 </div>
+                 
+                  <div class="form-group">
+                    <label for="premises">Type of premises</label><br>
+                         <select class="form-control" name="premises" id="premises">
+                            <option value="1">Owned</option>
+                            <option value="2">Rent</option>
+                            <option value="3">Lease</option>
+                            <option value="4">Others</option>
+                         </select>
+                  </div>
+                      
+                  <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-primary" id="birth_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      
+      <div class="footer">
+          <div class="container">
+              <p>&copy;Amrita Blockchain UI Team</p>
+          </div>
+      </div>
+	  
+	   <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+      
+  </body>
+</html>

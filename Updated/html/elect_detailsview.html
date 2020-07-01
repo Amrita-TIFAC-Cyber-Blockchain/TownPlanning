@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electricity Connection Details</title>
+    <link rel="icon" type="image/jpg" href="../images/city_logo.jpg" />
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/birth_death.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand nav-bar-text" href="#"
+          >Electricity Connection Details</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <!--<li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_birth">Birth Certificate Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_death">Death Certificate Details</a>
+            </li>-->
+          </ul>
+        </div>
+      </navbar>
+    </div>
+
+    <section id="register_birth">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col col-lg-12">
+            <div class="reg-box" id="reg-box">
+              <div class="reg-form" id="reg-form">
+                <img
+                  src="../images/details.jpg"
+                  width="200px"
+                  height="200px"
+                /><br />
+                <h3 text align="center">Electricity Connection Details</h3>
+                <br />
+
+                <form>
+                  <div class="form-group">
+                    <label for="birth_permit_no">Permit Number:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="birth_permit_no"
+                      name="birth_permit_no"
+                    /><br />
+                  </div>
+
+                  <input
+                    type="button"
+                    class="btn btn-primary"
+                    value="Details"
+                    onclick="view_details()"
+                  /><br /><br />
+                </form>
+                <form id="details">
+                  <div class="form-group">
+                    <label for="first_name_details">First Name :</label>
+                    <p id="first_name_details">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="last_name_details">Last Name :</label>
+                    <p id="last_name_details">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="gender">Gender :</label>
+                    <p id="gender">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="purpose">Purpose :</label>
+                    <p id="purpose">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="consumer_type">Consumer Type :</label>
+                    <p id="consumer_type">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="supply_type">Supply Type :</label>
+                    <p id="supply_type">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="service_requested">Service Requested :</label>
+                    <p id="service_requested">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="occupation">Occupation :</label>
+                    <p id="occupation">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="applicants_classification"
+                      >Applicants Classification :</label
+                    >
+                    <p id="applicants_classification">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address">Address for the new connection:</label>
+                    <p id="address">...</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State :</label><br />
+                    <p id="state">...</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City :</label><br />
+                    <p id="city">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="aadhaar_no">Aadhaar Number :</label><br />
+                    <p id="aadhar_no">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mob_no">Mobile Number :</label>
+                    <p id="mob_no">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="email">Email :</label><br />
+                    <p id="email">...</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="premises_type">Type of Premises :</label><br />
+                    <p id="premises_type">...</p>
+                  </div>
+
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >I agree to terms and conditions</label
+                    >
+                  </div>
+
+                  <div id="approve-reject-buttons">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      id="birth_details_permit_button"
+                    >
+                      Permit
+                    </button>
+                    <button
+                      type="submit"
+                      class="btn btn-primary show"
+                      id="birth_details_additional_info_button"
+                      onclick="add_info_details()"
+                    >
+                      Additional information needed
+                    </button>
+                  </div>
+                  <br /><br />
+                <div id="hidden-form" class="hide">
+                  <div id="detials_info" class="form-group">
+                    <label for="add_details_birth">Add the details</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="add_details_birth"
+                      placeholder="Enter the details"
+                    /><br />
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      id="birth_details_reject_button"
+                    >
+                      Reject
+                    </button>
+                  </div>
+                </div>
+                  <!-- <script>
+                              document.getElementById("detials_info").style.display = "none";
+                     </script> -->
+
+                  <!--Function to display text box for adding additional information for birth-->
+                  <!-- <script>
+                            function add_info_details()
+                            {
+                              var x = document.getElementById("detials_info");
+                                x.style.display = "block";
+                            }
+                    </script>
+                      
+                     <script>
+                              document.getElementById("details").style.display = "none";
+                     </script>
+                      
+                      -->
+                  <!--Function to display text box for adding additional information for birth-->
+                  <!-- <script>
+                            function view_details()
+                            {
+                              var x = document.getElementById("details");
+                                x.style.display = "block";
+                            }
+                    </script>
+                       -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container">
+        <p>&copy;Amrita Blockchain UI Team</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+    <script>
+      document.getElementById("details").style.display = "none";
+      document.getElementById("detials_info").style.display = "none";
+      function view_details() {
+        var x = document.getElementById("details");
+        x.style.display = "block";
+      }
+
+      function add_info_details() {
+        event.preventDefault();
+        document.getElementById("hidden-form").className = "show";
+
+        document.getElementById("detials_info").style.display = "block";
+        document.getElementById("approve-reject-buttons").className = "hide";
+      }
+    </script>
+    <script>
+      var account;
+      window.addEventListener("load", async () => {
+        if (typeof window.ethereum !== "undefined") {
+          console.log("MetaMask is Available :) !");
+        }
+
+        // Modern DApp browsers
+        if (window.ethereum) {
+          window.web3 = new Web3(ethereum);
+
+          // To prevent the page reloading when the MetaMask network changes
+          ethereum.autoRefreshOnNetworkChange = false;
+
+          // To Capture the account details from MetaMask
+          const accounts = await ethereum.enable();
+          account = accounts[0];
+        }
+        // Legacy DApp browsers
+        else if (window.web3) {
+          //window.web3 = new Web3(web3.currentProvider);
+          window.web3 = new Web3(
+            new Web3.providers.HttpProvider(
+              "https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c"
+            )
+          );
+        }
+        // Non-DApp browsers
+        else {
+          console.log("Non-Ethereum browser detected. Please install MetaMask");
+        }
+
+        loadstatus();
+      });
+    </script>
+  </body>
+</html>

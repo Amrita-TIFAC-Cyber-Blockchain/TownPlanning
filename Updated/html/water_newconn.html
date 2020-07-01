@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Water Connection</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Water Connection</title>
+    <link rel="icon" type="image/jpg" href="../images/city_logo.jpg">
+      
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+      
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    
+    
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/birth_death.css" />
+	<script type="text/javascript">
+	
+		var cat;
+		var subcat;
+
+		function checkowner(that) {
+			
+		    if (that.value == "Others") {
+		  
+		        document.getElementById("ifothers").style.display = "block";
+		    } else {
+		        document.getElementById("ifothers").style.display = "none";
+		    }
+
+		    if(that.value != "Owner"){
+		  
+		        document.getElementById("ifnotOwn").style.display = "block";
+		    } else {
+		        document.getElementById("ifnotOwn").style.display = "none";
+		    }
+
+		}
+
+		function buildutil(that){
+			cat=that.value;
+			if (cat == "1") {
+		        document.getElementById("a").innerHTML = "(a1) Upto G+1 - Upto 100 sqm";
+		        document.getElementById("b").innerHTML = "(a2) Upto G+2 - Above 100 Upto 200";
+		        document.getElementById("c").innerHTML = "-";
+		    }
+
+		    else if (cat == "2") {
+		    	document.getElementById("a").innerHTML = "All other buildings/flats - Upto 200 sqm";
+		    	document.getElementById("b").innerHTML = "-";
+		    	document.getElementById("c").innerHTML = "-";
+		    }
+
+		    else if (cat == "3") {
+		    	document.getElementById("a").innerHTML = "Category A - 100 sqm";
+		    	document.getElementById("b").innerHTML = "Category B - 50 sqm";
+		    	document.getElementById("c").innerHTML = "Category C - 25 sqm";
+		    }
+
+		    else if (cat == "4") {
+		    	document.getElementById("a").innerHTML = "Residential - Upto 200 sqm";
+		    	document.getElementById("b").innerHTML = "Commercial";
+		    	document.getElementById("c").innerHTML = "-";
+		    }
+
+		    else if(cat == "5"){
+		    	document.getElementById("a").innerHTML = "Reconnectionofserviceconnections disconnected fornon-payment   of   tax   and   charges/Shifting /Renewal of existing connection ";
+		    	document.getElementById("b").innerHTML = "-";
+		    	document.getElementById("c").innerHTML = "-";
+		    }
+		    else
+		    {
+		    	document.getElementById("a").innerHTML = "-";
+		    	document.getElementById("b").innerHTML = "-";
+		    	document.getElementById("c").innerHTML = "-";	
+		    }
+
+		    if(cat == "5")
+			{
+				document.getElementById("Number of dwelling units").style.display="none";
+			}
+			else
+			{
+				document.getElementById("Number of dwelling units").style.display="block";
+			}
+
+		}	
+
+		function amtpaid()
+		{
+			var no;
+			cat=document.getElementById("building-utility").value;
+			subcat=document.getElementById("area-per-dwelling-unit").value;
+			console.log(cat);
+			console.log(subcat);
+			
+			if((cat=="1")&&(subcat=="a"))
+			{
+				
+				document.getElementById("amt-pay-water").innerHTML=5000;
+			}
+			else
+			{
+				document.getElementById("amt-pay-water").innerHTML=7500;
+			}
+		}
+		
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="waterstyles.css">
+</head>
+    
+<body>
+	<header>
+		<div class="container-fluid" >
+      <!-- Nav Bar -->
+
+		      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="background-color: #008081;">
+		        <a class="navbar-brand nav-bar-text" href="#">New Water Connection</a>
+		        <button
+		          class="navbar-toggler"
+		          type="button"
+		          data-toggle="collapse"
+		          data-target="#navbarTogglerDemo01"
+
+		          aria-controls="navbarTogglerDemo01"
+		          aria-expanded="false"
+		          aria-label="Toggle navigation"
+		        >
+		          <span class="navbar-toggler-icon"></span>
+		        </button>
+
+		        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+		          <ul class="navbar-nav ml-auto">
+		            <!--<li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="water-supply.html"
+		                >Apply</a
+		              >
+		            </li>
+		            <li class="nav-item">
+		              <a class="nav-link nav-bar-text" href="display.html">Display</a>
+		            </li>-->
+                    </ul>
+		        </div>
+		      </navbar>
+    	</div>
+	</header>
+
+	<section id="register-birth">
+		<div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/new_water_connection.jpg" width="300px" height="200px"><br>
+                  <h3 text align="center">New Water Connection Application</h3><br><br>
+                  <form>
+                  <div class="form-group">
+                      <label for="Appl-name">Name of the Applicant</label>
+                      <input type="text" class="form-control" id="Appl-name" placeholder="Name of the Applicant">     
+                  </div>
+                  <div class="form-group">
+                      <label for="Appl-addr">Address of the Applicant</label>
+                      <textarea class="form-control" id="Appl-name" placeholder="Address of the Applicant"> </textarea>   
+                  </div>
+                  <div class="form-group">
+                      <label for="Phone-No">Phone No</label>
+                      <input type="text" class="form-control" id="Phone-No" placeholder="Phone No">
+                  </div>
+                  <div class="form-group">
+                      <label for="Mobile-No">Mobile No</label>
+                      <input type="text" class="form-control" id="Mobile-No"  placeholder="Mobile No">
+                  </div>
+                  <div class="form-group">
+                      <label for="Email">Email ID</label>
+                      <input type="email" class="form-control" id="Email" placeholder="Email ID">
+                  </div>
+                  <div class="form-group">
+					    <label for="Legal-Status">Legal Status</label>
+					    <select class="form-control" id="Legal-Status" onchange="checkowner(this)">
+					      <option value="#">select</option>
+					      <option value="Owner">Owner</option>
+					      <option value="Lessee">Lessee</option>
+					      <option value="Power of Attorney">Power of Attorney</option>
+					      <option value="Others">Others</option>
+					    </select>
+					    <br>
+					    <div id="ifothers" style="display: none;">
+					    	<input type="text" class="form-control" id="Others" placeholder="Others (please specify)"> 
+					    </div> 
+  				  </div>
+
+  				  <div class="ifnotOwn" id="ifnotOwn" style="display: none;">
+  				  	 <div class="form-group">
+	                      <label for="Appl-name">Name of the Owner</label>
+	                      <input type="text" class="form-control" id="Owner-name" placeholder="Name of the Owner">     
+	                  </div>
+	                  <div class="form-group">
+	                      <label for="Appl-addr">Address of the Owner</label>
+	                      <textarea class="form-control" id="Owner-name" placeholder="Address of the Owner"> </textarea>   
+	                  </div>
+	                  <div class="form-group">
+	                      <label for="Phone-No">Phone No of the Owner :</label>
+	                      <input type="text" class="form-control" id="Owner-phone-No" placeholder="Phone No of the Owner">
+	                  </div>
+	                  <div class="form-group">
+	                      <label for="Mobile-No">Mobile No of the Owner :</label>
+	                      <input type="text" class="form-control" id="Owner-Mobile-No"  placeholder="Mobile No of the Owner">
+	                  </div>
+	                  <div class="form-group">
+	                      <label for="Email">Email ID of the Owner:</label>
+	                      <input type="email" class="form-control" id="Owner-Email" placeholder="Email ID of the Owner">
+	                  </div>
+  				  </div>
+
+  				  <div class="form-group">
+                      <input type="checkbox" class="form-check-input" id="new-building">
+                      <label  for="new-building">Connection for new building</label><br>
+                      <input type="checkbox" class="form-check-input" id="modified-building">
+                      <label  for="modified-building">Connection for modified building</label><br>
+                      <input type="checkbox" class="form-check-input" id="alt-existing">
+                      <label  for="alt-existing">Alteration to existing water system</label><br>
+                      <input type="checkbox" class="form-check-input" id="rain-harvest">
+                      <label  for="rain-harvest">Rain Water Harvesting</label><br>
+                  </div>
+  				  
+  				  <div class="form-group">
+					    <label for="building-utility">Utility of Building</label>
+					    <select class="form-control" id="building-utility" onchange="buildutil(this)">
+					      <option value="0">Select</option>
+					      <option value="1">Residential independent houses</option>
+					      <option value="2">All other residential buildings/flats (Buildings having G+2 & above and flats)</option>
+					      <option value="3">Non Residential</option>
+					      <option value="4">Mixed use of buildings (partly residential and partly commercial etc.)Re</option>
+					      <option value="5">Reconnection/Shifting/Renewal</option>
+					    </select> 
+  				  </div>
+
+  				  <div class="form-group">
+					    <label for="area-per-dwelling-unit">Area per dwelling unit</label>
+					    <select class="form-control" id="area-per-dwelling-unit" onchange="islast(this)">
+					      <option value="#">Select</option>
+					      <option value="a" id="a">-</option>
+					      <option value="b" id="b">-</option>
+					      <option value="c" id="c">-</option>
+					    </select> 
+  				  </div>
+
+  				  <div class="form-group">
+					    <label for="built-up-area">Built-up Area (sq.m) </label>
+					    <input type="number" class="form-control" id="built-up-area" placeholder="Name of dwelling units"> 
+  				  </div>
+
+  				   <div class="form-group" id="Number of dwelling units" style="display: none;">
+					    <label for="Number-dwelling-units">Number of dwelling units</label>
+					    <input type="number" class="form-control" id="Number-dwelling-units" placeholder="Name of the dwelling units"> 
+  				  </div>
+
+
+                  <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                  </div>
+                  <button type="button" class="btn btn-primary" onclick="amtpaid()">Submit</button>
+                  <button type="reset" class="btn btn-primary" id="death_reset_button">Reset</button>
+                  <br>
+                  <h5 style="margin-top: 2%;">Rate per unit dwelling unit for water connection</h5>
+				  <p id="amt-pay-water">..</p>
+  				  <button type="button" class="btn btn-primary">Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+	</section>
+
+      <div class="footer">
+          <div class="container">
+              <p>&copy;Amrita Blockchain UI Team</p>
+          </div>
+      </div>
+	
+	 <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+</body>
+</html>

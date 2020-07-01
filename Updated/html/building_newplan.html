@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Plan Approval</title>
+    <link rel="icon" type="image/jpg" href="../images/city_logo.jpg">
+      
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+      
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+      
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/04a54148ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../css/birth_death.css" />
+      
+    <!--JS-->
+    <script src="../js/cities.js"></script>
+      
+  </head>
+    
+    
+  <body>
+      <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <navbar class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand nav-bar-text" href="#">Building Plan Approval</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_birth">Applicant Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#register_death">Building Details</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-bar-text" href="#plan">Proposed Plan</a>
+            </li>
+            </ul>
+        </div>
+      </navbar>
+    </div>
+    
+    <section id="register_birth">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/applicant.jpg" width="200px" height="200px"><br>
+                  <h3 text align="center">Applicant Details</h3><br>
+                  <form>
+                      
+                      <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" class="form-control" id="name" placeholder="Enter the name">     
+                      </div>
+
+                     <div class="form-group">
+                         <label for="Mobile">Mobile</label><br>
+                         <input type="text" class="form-control" id="mobile" placeholder="Enter the mobile no">
+                     </div>
+
+                     <div class="form-group">
+                         <label for="email">Email</label><br>
+                         <input type="text" class="form-control" id="email" placeholder="Enter the email">
+                     </div>
+                      
+                  <div class="form-group">
+                      <label for="address">Address</label><br>
+                      <textarea rows="4" cols="50" name="address" form="usrform" placeholder="Enter address"></textarea>
+                  </div>
+                     
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select class="form-control" id="designation" name="Emergency Device type">
+                          <option value="Manager">Manager</option>
+                          <option value="Architect">Architect</option>
+                          <option value="Owner">Owner</option>
+                          <option value="Government">Government</option>
+                          <option value="Other">Other</option>
+                        </select>
+                      </div>
+                    
+
+                      <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Continue</button>
+                      <button type="reset" class="btn btn-primary" id="birth_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      
+      
+          
+      <section id="register_death">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/buildings.jpg" width="200px" height="200px" align="centre"><br>
+                  <h3 text align="center">Construction Building Details</h3><br>
+                  <form>
+
+
+                       <div class="form-group">
+                            <label for="building_type">Building Type</label>
+                            <select class="form-control" id="building_type" name="building_type">
+                              <option value="Residential">Residential</option>
+                              <option value="Commercial">Commercial</option>
+                              <option value="Institutional">Institutional</option>
+                              <option value="Industrial">Industrial</option>
+                              <option value="Government">Government</option>
+                              <option value="Other">Other</option>
+                            </select>   
+                      </div>
+
+                    <div class="form-group">
+                        <label for="plot_no">Plot Number</label>
+                        <input type="number" class="form-control" id="plot_no" placeholder="Enter the plot number">     
+                    </div>
+
+                      <div class="form-group">
+                          <label for="street">Street</label>
+                          <input type="text" class="form-control" id="street" placeholder="Enter the street">     
+                      </div>
+
+                      <div class="form-group">
+                          <label for="ward_no">Ward Number</label>
+                          <input type="number" class="form-control" id="ward_no" placeholder="Enter the ward number">     
+                      </div>
+
+                      <div class="form-group">
+                            <label for="sc">Select State and City</label><br>
+                                <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+                                 <select id ="state" class="form-control" required name="sc"></select>
+                                 <script language="javascript">print_state("sts");</script>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="area">Area in SquareFeet</label>
+                          <input type="number" class="form-control" id="area" placeholder="Enter the area in SquareFeet">     
+                      </div>
+
+                      <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary">Continue</button>
+                      <button type="reset" class="btn btn-primary" id="death_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+      
+      <section id="plan">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-lg-12">
+              <div class="reg-box" id="reg-box">
+                <div class="reg-form" id="reg-form">
+                  <img src="../images/Building-Plan.jpg" width="200px" height="200px"><br>
+                  <h3 text align="center">Proposed Plan</h3><br>
+                  <form id="plan-form">
+                      <div class="form-group">
+                        <label>Upload Proposed Building Plan</label>
+                        <input
+                          type="file"
+                          id="plan_file"
+                          name="plan_file"
+                          multiple
+                          onchange="return fileValidation()"
+                        /><br />  
+                      </div>
+ 
+
+                      <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="reset" class="btn btn-primary" id="death_reset_button">Reset</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+      
+      
+
+    <!--Function to validate file type and file size.
+        Reference:
+        1.https://www.geeksforgeeks.org/file-type-validation-while-uploading-it-using-javascript/#:~:text=Using%20JavaScript%2C%20you%20can%20easily,complete%20file%20type%20validation%20code.  
+        2.https://www.geeksforgeeks.org/validation-of-file-size-while-uploading-using-javascript-jquery/?ref=rp
+    -->
+      
+    <script> 
+            function fileValidation() 
+            { 
+                var fileInput =  document.getElementById('birth_file'); 
+
+                var filePath = fileInput.value; 
+
+                // Allowing file type 
+                var allowedExtensions =  /(\.doc|\.docx|\.odt|\.pdf|\.tex|\.txt|\.rtf|\.wps|\.wks|\.wpd)$/i; 
+
+                if (!allowedExtensions.exec(filePath)) 
+                { 
+                    alert('Invalid file type'); 
+                    fileInput.value = ''; 
+                }  
+
+                const fi = document.getElementById('birth_file'); 
+                // Check if any file is selected. 
+                if (fi.files.length > 0) 
+                { 
+                    for (const i = 0; i <= fi.files.length - 1; i++) 
+                    { 
+                        const fsize = fi.files.item(i).size; 
+                        const file = Math.round((fsize / 1024)); 
+                        // The size of the file. 
+                        if (file >= 5120) 
+                        { 
+                            alert( "File too Big, please select a file less than 5mb"); 
+                            fileInput.value = ''; 
+                             return false;
+                        } 
+                    } 
+                }
+            } 
+    </script> 
+          
+      <div class="footer">
+          <div class="container">
+              <p>&copy;Amrita Blockchain UI Team</p>
+          </div>
+      </div>
+	  
+	   <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.js"></script>
+		<script>	
+	
+		var account;
+		window.addEventListener('load', async () => {
+
+		
+			if (typeof window.ethereum !== 'undefined') { 
+				console.log("MetaMask is Available :) !"); 
+				}
+				
+			// Modern DApp browsers
+			if (window.ethereum) {
+				window.web3 = new Web3(ethereum);
+				
+				// To prevent the page reloading when the MetaMask network changes
+				ethereum.autoRefreshOnNetworkChange = false;
+				
+				// To Capture the account details from MetaMask
+				const accounts = await ethereum.enable();
+				account = accounts[0];
+				
+				}
+			// Legacy DApp browsers
+			else if (window.web3) {
+				//window.web3 = new Web3(web3.currentProvider);
+				window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/cbd9dc11b30147e9a2cc974be655ef7c")); 
+				}
+			// Non-DApp browsers
+			else {
+				console.log('Non-Ethereum browser detected. Please install MetaMask');
+				}
+				
+				loadstatus();
+				
+				});
+		
+		</script>
+      
+  </body>
+</html>
